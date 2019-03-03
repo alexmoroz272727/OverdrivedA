@@ -29,9 +29,9 @@ public class NavalnySquare : MonoBehaviour
         KD = Random.Range(0, 500);
            if (KD == 1)
             {
-             transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+             transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
                 Vverhu = true;
-                timevverhu = Random.Range(10, 40);
+                timevverhu = Random.Range(10, 25);
             }
         }
         if (Vverhu == true)
@@ -41,7 +41,7 @@ public class NavalnySquare : MonoBehaviour
              timevverhu -= Time.deltaTime;
              if(timevverhu < 5)
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y - 2 , transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y - 1 , transform.position.z);
                 timevverhu = 0;
                 Vverhu = false;
                 

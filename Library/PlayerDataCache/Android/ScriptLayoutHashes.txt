@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Александр/Documents/Snake/ert23.apk
+C:/Users/Александр/Documents/Snake/Stable0.1.apk
 SceneListBegin?
 Assets/gfdfgdf.unity
 SceneListEnd?
@@ -162,9 +162,11 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+5a1dff9bcac66d8323972244c2f0815b Assembly-CSharp.dll:.NavalnySquare
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 12489e095a64504d1e6823f286671b7a Assembly-CSharp.dll:.SnakeMovment
-5a1dff9bcac66d8323972244c2f0815b Assembly-CSharp.dll:.NavalnySquare
+26fe8d64d18a6adb64611d959c11fe05 Assembly-CSharp.dll:.NSAddon
+0d7999be48f4edc89ff9ba3475e41371 Assembly-CSharp.dll:.TextScr

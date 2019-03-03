@@ -63,8 +63,10 @@
      <Compile Include="Assets\Scripts\FoodGen.cs" />
      <Compile Include="Assets\Scripts\FoodGeneration.cs" />
      <Compile Include="Assets\Scripts\NavalnySquare.cs" />
+     <Compile Include="Assets\Scripts\NSAddon.cs" />
      <Compile Include="Assets\Scripts\SnakeMovment.cs" />
      <Compile Include="Assets\Scripts\TailMovment.cs" />
+     <Compile Include="Assets\Scripts\TextScr.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Александр/Documents/Snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

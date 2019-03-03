@@ -8,8 +8,8 @@ public class SnakeMovment : MonoBehaviour {
     public float Alltime = 0;
     public bool alpha = false;
     public bool omega = false;
-    public float Speed;
-	public float RotationSpeed;
+    public float Speed = 5f;
+    public float RotationSpeed;
 	public List<GameObject> tailObjects = new List<GameObject>();
 	public float z_offset = 0.5f;
 
@@ -21,8 +21,9 @@ public class SnakeMovment : MonoBehaviour {
 	}
 	void Update () 
 	{
-        Speed = 5f + Alltime * 0.05f;
-        Alltime += Time.deltaTime;
+        //Alltime += Time.deltaTime;
+        Speed = Speed + Time.deltaTime * 0.05f;
+        
         ScoreText.text = score.ToString();
 		transform.Translate(Vector3.forward*Speed*Time.deltaTime);
 
@@ -35,6 +36,16 @@ public class SnakeMovment : MonoBehaviour {
 			transform.Rotate(Vector3.up*-1*RotationSpeed*Time.deltaTime);
 		}
 	}
+
+    public void selld()
+    {
+        score = GameObject.Find("SpeedShop").GetComponent<TextScr>().localscore;
+
+    }
+    public void SpeedCh()
+    {
+        Speed = Speed - 5f;
+    }
 
 	public void AddTail()
 	{
