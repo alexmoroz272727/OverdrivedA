@@ -8,7 +8,7 @@ public class TextScr : MonoBehaviour
     public Text ShopText;
     
     public int localscore;
-    public int localprice = 10;
+    public int localprice = 50;
     public float SpChange;
 
     void OnTriggerEnter(Collider other)
@@ -25,6 +25,7 @@ public class TextScr : MonoBehaviour
                 //SpChange = GameObject.Find("SnakeMain").GetComponent<SnakeMovment>().Speed;
                 //SpChange = SpChange - 5f;
                 GameObject.Find("SnakeMain").GetComponent<SnakeMovment>().SpeedCh();
+                localprice = localprice * 2;
 
 
             }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class NavalnySquare : MonoBehaviour
     
 {
-    public int KD;
-    public bool Vverhu;
-    public float timevverhu;
+    private int KD;
+    private bool Vverhu;
+    private float timevverhu;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class NavalnySquare : MonoBehaviour
 
         if (Vverhu==false)
         { 
-        KD = Random.Range(0, 500);
+        KD = Random.Range(0, 2400);
            if (KD == 1)
             {
              transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
