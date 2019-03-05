@@ -2,29 +2,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-public class SnakeMovment : MonoBehaviour {
+using System;
+public class SnakeMovment : MonoBehaviour
+{
 
 
     public float Alltime = 0;
     public bool alpha = false;
     public bool omega = false;
-    public float Speed;
-	public float RotationSpeed;
+    public float Speed = 5f;
+    public float RotationSpeed;
 	public List<GameObject> tailObjects = new List<GameObject>();
 	public float z_offset = 0.5f;
 
 	public GameObject TailPrefab;
 	public Text ScoreText;
-	public int score = 0;
-	void Start () {
+    public Text MainScore;
+    public Text ShowMulti;
+	public double score = 0;
+    public double MScore = 125f;
+    public double EnemyScore = 5000f;
+    public double Vote;
+    public double Multi = 1f;
+   
+	void Start ()
+    {
 	tailObjects.Add(gameObject);
-	}
-	void Update () 
+    }
+
+    void Update () 
 	{
-        Speed = 5f + Alltime * 0.05f;
-        Alltime += Time.deltaTime;
+        //Alltime += Time.deltaTime;
+        Speed = Speed + Time.deltaTime * 0.05f;
+        EnemyScore = EnemyScore + 70f * Time.deltaTime;
+        //Vote = MScore / EnemyScore * 100f;
+        Vote = Math.Round(MScore / EnemyScore * 100f, 2);
+        
         ScoreText.text = score.ToString();
-		transform.Translate(Vector3.forward*Speed*Time.deltaTime);
+        MainScore.text = Vote.ToString() + "%";
+        ShowMulti.text = Multi.ToString();
+
+
+
+        transform.Translate(Vector3.forward*Speed*Time.deltaTime);
 
 		if(omega==true)
 		{
@@ -36,16 +56,49 @@ public class SnakeMovment : MonoBehaviour {
 		}
 	}
 
-	public void AddTail()
+    public void selld()
+    {
+        score = GameObject.Find("SpeedShop").GetComponent<TextScr>().localscore;
+
+    }
+    public void sells()
+    {
+        score = GameObject.Find("SpeedShop1").GetComponent<TextScr1>().localscore1;
+
+    }
+    public void SpeedCh()
+    {
+        Speed = Speed - 5f;
+    }
+    public void MultiUp()
+    {
+        Multi = Multi + 0.3f;
+        Multi = Math.Round(Multi, 3);
+    }
+
+    public void AddTail()
 	{
-		score++;
+        Multi += 0.002f;
+        Multi = Math.Round(Multi, 3);
+        MScore = MScore + 10f * Multi;
+        score += 1* Multi;
+        score = Math.Round(score, 0);
+        
+        
 		Vector3 newTailPos = tailObjects[tailObjects.Count-1].transform.position;
 		newTailPos.z -= z_offset;
 		tailObjects.Add(GameObject.Instantiate(TailPrefab,newTailPos,Quaternion.identity) as GameObject);
 	}
     public void AddTail1()
     {
-        score = score + 10;
+        Multi += 0.008f;
+        Multi = Math.Round(Multi, 3);
+        MScore = MScore + 30f *Multi;
+        score = score + 10f * Multi;
+        score = Math.Round(score, 0);
+
+
+
         Vector3 newTailPos = tailObjects[tailObjects.Count - 1].transform.position;
         newTailPos.z -= z_offset;
         tailObjects.Add(GameObject.Instantiate(TailPrefab, newTailPos, Quaternion.identity) as GameObject);

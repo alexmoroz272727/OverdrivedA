@@ -11,9 +11,10 @@ public class FoodGen : MonoBehaviour
     public GameObject curFood1;
     
     public bool eat1 = true;
-    public int pol1;
+    public int pol1 = 0;
+
+
     void AddNewSphere()
-        
     {
         RandomPos();
         curFood1 = GameObject.Instantiate(foodPrefab1, curPos1, Quaternion.identity) as GameObject;
@@ -35,19 +36,44 @@ public class FoodGen : MonoBehaviour
 
     void Update()
     {
-        
-        
-            if (eat1 == false)
-            {
-                AddNewSphere();
-                eat1 = true;
-
-            }
-          
-        
-        else
+        if (pol1 < 30)
         {
-            return;
+            AddNewSphere();
+            pol1++;
+            print(pol1);
         }
+
+        if (eat1 == false)
+        {
+
+            //AddNewFood();
+            pol1--;
+            print(pol1);
+            eat1 = true;
+
+
+        }
+
+
+
     }
+
+    //void Update()
+    //{
+
+
+    //      if (eat1 == false)
+    //     {
+    //        AddNewSphere();
+    //      eat1 = true;
+
+    //}
+
+
+    // else
+    //{
+    //  return;
+    //}
+    //}
 }
+

@@ -12,19 +12,25 @@ public class FoodGeneration : MonoBehaviour {
     public int pol;
 
 
-    void Start()
-    {
-        for (pol = 30; pol > 5; pol--)
-        {
-            AddNewFood();
+    //void Awake()
+    //{
 
-        }
-    }
+        
+       
+        //for (pol = 30; pol > 5; pol--)
+        //{
+         //   AddNewFood();
+           // 
+           //print(pol);
+
+        //}
+    //}
 
     void AddNewFood()
 	{
-	RandomPos();
-	curFood = GameObject.Instantiate(foodPrefab,curPos,Quaternion.identity) as GameObject;
+        //curPos = new Vector3(Random.Range(XSize * -1, XSize), -1f, Random.Range(ZSize * -1, ZSize));
+        RandomPos();
+        curFood = GameObject.Instantiate(foodPrefab,curPos,Quaternion.identity) as GameObject;
 	}
 	void RandomPos()
 	{
@@ -33,19 +39,25 @@ public class FoodGeneration : MonoBehaviour {
 
     void Update()
     {
-
+        if (pol < 30)
+        {
+            AddNewFood();
+            pol++;
+            print(pol);
+        }
 
         if (eat == false)
         {
-            AddNewFood();
+            
+            //AddNewFood();
+            pol--;
+            print(pol);
             eat = true;
 
+
         }
 
 
-        else
-        {
-            return;
-        }
+        
     }
 }
