@@ -7,8 +7,8 @@ public class TextScr : MonoBehaviour
 {
     public Text ShopText;
     
-    public int localscore;
-    public int localprice = 50;
+    public double localscore;
+    public float localprice = 50;
     public float SpChange;
 
     void OnTriggerEnter(Collider other)
