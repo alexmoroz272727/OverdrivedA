@@ -8,7 +8,7 @@ public class Food2 : MonoBehaviour
 
    void zxcv()
     {
-       GameObject.Find("GameHelper1").GetComponent<FoodGen>().eat1 = false; 
+       GameObject.Find("GameHelper").GetComponent<FoodGen>().eat1 = false; 
 
     }
 
