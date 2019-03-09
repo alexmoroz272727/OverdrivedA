@@ -282,6 +282,113 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276863995}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &422914301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422914302}
+  - component: {fileID: 422914306}
+  - component: {fileID: 422914305}
+  - component: {fileID: 422914304}
+  - component: {fileID: 422914303}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &422914302
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422914301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1077511970}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -591, y: -433}
+  m_SizeDelta: {x: 400, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &422914303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422914301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccc1da3f19a0af499dd08e6aec849d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTop: {fileID: 422914305}
+--- !u!114 &422914304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422914301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3e07a675162734fb94bbdefec3eb4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1719802392}
+--- !u!114 &422914305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422914301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3a54fcb32f2f1884eb78ca4961f86b00, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &422914306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422914301}
+  m_CullTransparentMesh: 0
 --- !u!1 &477087982
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f72eb95115d3a249adec67ec2540448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replace: 0
+  ShowTop: {fileID: 0}
+  MoneyScore: 0
+  LastMoney: 0
 --- !u!65 &987867047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2367,6 +2478,7 @@ RectTransform:
   - {fileID: 1798198045}
   - {fileID: 1684498971}
   - {fileID: 2103052525}
+  - {fileID: 422914302}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.040000003}
@@ -3160,7 +3272,7 @@ PrefabInstance:
     - target: {fileID: 114000012012314042, guid: 9890f514d07427b4ca931d7dafa72a1d,
         type: 3}
       propertyPath: z_offset
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114000012012314042, guid: 9890f514d07427b4ca931d7dafa72a1d,
         type: 3}
@@ -4026,6 +4138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f72eb95115d3a249adec67ec2540448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replace: 0
+  ShowTop: {fileID: 422914305}
+  MoneyScore: 0
+  LastMoney: 0
 --- !u!65 &2141854890
 BoxCollider:
   m_ObjectHideFlags: 0

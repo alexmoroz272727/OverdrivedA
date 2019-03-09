@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/anime.unity
     guid: adc11d8572144054383b1c72eb442c89
+  - enabled: 1
+    path: Assets/Shop.unity
+    guid: f1387c063c18d8e4aa3083f6c5f6f0b4
   m_configObjects: {}

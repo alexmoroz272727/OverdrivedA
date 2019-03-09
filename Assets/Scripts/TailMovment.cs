@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class TailMovment : MonoBehaviour {
 
 	public float Speed;
@@ -8,7 +10,8 @@ public class TailMovment : MonoBehaviour {
 	public int indx;
 	public GameObject tailTargetObj;
 	public SnakeMovment mainSnake;
-	void Start()
+    private int replace;
+    void Start()
 	{
 		
 		mainSnake = GameObject.FindGameObjectWithTag("SnakeMain").GetComponent<SnakeMovment>();
@@ -29,10 +32,17 @@ public class TailMovment : MonoBehaviour {
 		
 		if(other.CompareTag("SnakeMain"))
 		{
-			if(indx > 15)
+			if(indx > 4)
 			{
-				Application.LoadLevel(Application.loadedLevel);
-			}
+                replace = Convert.ToInt32(other.GetComponent<SnakeMovment>().Votes);
+                if (PlayerPrefs.GetInt("Votes", 0) < replace)
+                {
+                    PlayerPrefs.SetInt("Votes", replace);
+
+                }
+                //ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
+                SceneManager.LoadScene("anime");
+            }
 		}
 
 	}

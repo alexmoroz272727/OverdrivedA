@@ -24,10 +24,12 @@ public class SnakeMovment : MonoBehaviour
     public double EnemyScore = 5000f;
     public double Vote;
     public double Multi = 1f;
+    public double Votes;
    
 	void Start ()
     {
 	tailObjects.Add(gameObject);
+        
     }
 
     void Update () 
@@ -83,9 +85,11 @@ public class SnakeMovment : MonoBehaviour
         MScore = MScore + 10f * Multi;
         score += 1* Multi;
         score = Math.Round(score, 0);
-        
-        
-		Vector3 newTailPos = tailObjects[tailObjects.Count-1].transform.position;
+        Votes += 1 * Multi;
+        Votes = Math.Round(Votes, 0);
+
+
+        Vector3 newTailPos = tailObjects[tailObjects.Count-1].transform.position;
 		newTailPos.z -= z_offset;
 		tailObjects.Add(GameObject.Instantiate(TailPrefab,newTailPos,Quaternion.identity) as GameObject);
 	}
@@ -96,6 +100,8 @@ public class SnakeMovment : MonoBehaviour
         MScore = MScore + 30f *Multi;
         score = score + 10f * Multi;
         score = Math.Round(score, 0);
+        Votes += 10 * Multi;
+        Votes = Math.Round(Votes, 0);
 
 
 
