@@ -32,16 +32,13 @@ public class TailMovment : MonoBehaviour {
 		
 		if(other.CompareTag("SnakeMain"))
 		{
-			if(indx > 4)
+			if(indx > 10)
 			{
-                replace = Convert.ToInt32(other.GetComponent<SnakeMovment>().Votes);
-                if (PlayerPrefs.GetInt("Votes", 0) < replace)
-                {
-                    PlayerPrefs.SetInt("Votes", replace);
 
-                }
-                //ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
-                SceneManager.LoadScene("anime");
+
+                GameObject.Find("Earth").GetComponent<Borders>().TakieDela();
+
+
             }
 		}
 

@@ -98,9 +98,9 @@ public class SnakeMovment : MonoBehaviour
         Multi += 0.008f;
         Multi = Math.Round(Multi, 3);
         MScore = MScore + 30f *Multi;
-        score = score + 10f * Multi;
+        score = score + 5f * Multi;
         score = Math.Round(score, 0);
-        Votes += 10 * Multi;
+        Votes += 5 * Multi;
         Votes = Math.Round(Votes, 0);
 
 

@@ -74,12 +74,14 @@
     <Compile Include="Assets\Scripts\MenuToShop.cs" />
     <Compile Include="Assets\Scripts\NavalnySquare.cs" />
     <Compile Include="Assets\Scripts\ShopToMenu.cs" />
+    <Compile Include="Assets\Scripts\SkinStart.cs" />
     <Compile Include="Assets\Scripts\SnakeMovment.cs" />
     <Compile Include="Assets\Scripts\SnapScrolling.cs" />
     <Compile Include="Assets\Scripts\TailMovment.cs" />
     <Compile Include="Assets\Scripts\TextScr.cs" />
     <Compile Include="Assets\Scripts\TextScr1.cs" />
     <Compile Include="Assets\Scripts\TopScore.cs" />
+    <Compile Include="Assets\Scripts\TopScore1.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Александр/Documents/Snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

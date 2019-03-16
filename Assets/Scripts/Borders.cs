@@ -27,8 +27,25 @@ public class Borders : MonoBehaviour {
                 
         
             ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
-            SceneManager.LoadScene("anime");
+            SceneManager.LoadScene("menu");
         }
 
 	}
-}
+    public void TakieDela()
+    {
+        
+        replace = Convert.ToInt32(GameObject.Find("SnakeMain").GetComponent<SnakeMovment>().Votes);
+        LastMoney = PlayerPrefs.GetInt("Votes", 0);
+        MoneyScore = LastMoney + replace;
+        PlayerPrefs.SetInt("Votes", MoneyScore);
+
+
+        // if (PlayerPrefs.GetInt("Votes", 0) < replace)
+        //{
+        //PlayerPrefs.SetInt("Votes", replace);
+
+
+        ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
+        SceneManager.LoadScene("menu");
+    }
+} 

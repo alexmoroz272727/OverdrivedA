@@ -48,6 +48,16 @@ public class SnapScrolling : MonoBehaviour
             
         }
         instPans[0].GetComponent<Image>().sprite = heroSprites[0];
+        instPans[1].GetComponent<Image>().sprite = heroSprites[1];
+        instPans[2].GetComponent<Image>().sprite = heroSprites[2];
+        instPans[3].GetComponent<Image>().sprite = heroSprites[3];
+        instPans[4].GetComponent<Image>().sprite = heroSprites[4];
+        instPans[5].GetComponent<Image>().sprite = heroSprites[5];
+        instPans[6].GetComponent<Image>().sprite = heroSprites[6];
+        instPans[7].GetComponent<Image>().sprite = heroSprites[7];
+        instPans[8].GetComponent<Image>().sprite = heroSprites[8];
+        instPans[9].GetComponent<Image>().sprite = heroSprites[9];
+
 
     }
 
