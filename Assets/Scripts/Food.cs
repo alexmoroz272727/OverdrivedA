@@ -3,13 +3,30 @@ using System.Collections;
 
 public class Food : MonoBehaviour
 {
-    
+
+    private float lifetime;
+
+    private void Awake()
+    {
+        lifetime = Random.Range(20f, 60f);
+    }
 
     void sel()
     {
         GameObject.Find("GameHelper").GetComponent<FoodGeneration>().eat = false;
         
 
+    }
+
+
+    private void Update()
+    {
+        lifetime -= Time.deltaTime;
+        if (lifetime < 0)
+        {
+            sel();
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,5 +55,6 @@ public class Food : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   
 
 }

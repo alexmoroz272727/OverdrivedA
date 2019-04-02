@@ -28,7 +28,7 @@ public class SnapScrolling : MonoBehaviour
     private Vector2 contentVector;
 
     public int selectedPanID;
-    private bool isScrolling;
+    public bool isScrolling;
 
     private void Start()
     {

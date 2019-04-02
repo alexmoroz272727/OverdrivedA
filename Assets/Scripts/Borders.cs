@@ -21,11 +21,11 @@ public class Borders : MonoBehaviour {
             PlayerPrefs.SetInt("Votes", MoneyScore);
 
 
-           // if (PlayerPrefs.GetInt("Votes", 0) < replace)
+            // if (PlayerPrefs.GetInt("Votes", 0) < replace)
             //{
-                //PlayerPrefs.SetInt("Votes", replace);
-                
-        
+            //PlayerPrefs.SetInt("Votes", replace);
+
+            GameObject.Find("GameHelper").GetComponent<AdControl>().ShowAd();
             ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
             SceneManager.LoadScene("menu");
         }
@@ -44,7 +44,7 @@ public class Borders : MonoBehaviour {
         //{
         //PlayerPrefs.SetInt("Votes", replace);
 
-
+        GameObject.Find("GameHelper").GetComponent<AdControl>().ShowAd();
         ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
         SceneManager.LoadScene("menu");
     }

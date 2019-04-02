@@ -60,11 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\accept.cs" />
+    <Compile Include="Assets\Scripts\AdControl.cs" />
+    <Compile Include="Assets\Scripts\Bonus.cs" />
+    <Compile Include="Assets\Scripts\BonusGen.cs" />
     <Compile Include="Assets\Scripts\Borders.cs" />
+    <Compile Include="Assets\Scripts\BordersMob.cs" />
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\ButtonLeft.cs" />
     <Compile Include="Assets\Scripts\ButtonRight.cs" />
     <Compile Include="Assets\Scripts\CamF2.cs" />
+    <Compile Include="Assets\Scripts\DescText.cs" />
     <Compile Include="Assets\Scripts\Food.cs" />
     <Compile Include="Assets\Scripts\Food2.cs" />
     <Compile Include="Assets\Scripts\FoodGen.cs" />
@@ -73,6 +79,7 @@
     <Compile Include="Assets\Scripts\Load.cs" />
     <Compile Include="Assets\Scripts\MenuToShop.cs" />
     <Compile Include="Assets\Scripts\NavalnySquare.cs" />
+    <Compile Include="Assets\Scripts\Policy.cs" />
     <Compile Include="Assets\Scripts\ShopToMenu.cs" />
     <Compile Include="Assets\Scripts\SkinStart.cs" />
     <Compile Include="Assets\Scripts\SnakeMovment.cs" />
@@ -82,6 +89,7 @@
     <Compile Include="Assets\Scripts\TextScr1.cs" />
     <Compile Include="Assets\Scripts\TopScore.cs" />
     <Compile Include="Assets\Scripts\TopScore1.cs" />
+    <None Include="Assets\UnityAds\link.xml" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Александр/Documents/Snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -294,6 +302,12 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>C:/Users/Александр/Documents/Snake/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization.Editor">
+      <HintPath>C:/Users/Александр/Documents/Snake/Assets/UnityAds/UnityEngine.Monetization.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/Александр/Documents/Snake/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>

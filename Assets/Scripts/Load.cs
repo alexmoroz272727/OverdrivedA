@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Load : MonoBehaviour
 {
+    
+    
     void OnMouseDown()
     {
-        SceneManager.LoadScene("anime");
+        if (PlayerPrefs.GetInt("Policy", 0) == 1)
+        {
+            SceneManager.LoadScene("anime");
+        }
     }
+    
 }

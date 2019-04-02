@@ -17,7 +17,7 @@ public class TopScore : MonoBehaviour
     private int buy8 = 0;
     private int buy9 = 0;
     private int buy10 = 0;
-    public Sprite[] heroSprites1;
+    //public Sprite[] heroSprites1;
 
 
 
@@ -33,9 +33,9 @@ public class TopScore : MonoBehaviour
         switch (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID)
         {
             case 0:
-                if (moneys >= 5000 && PlayerPrefs.GetInt("Buy1", 0) == 0)
+                if (moneys >= 0 && PlayerPrefs.GetInt("Buy1", 0) == 0)
                 {
-                    moneys -= 5000;
+                    moneys -= 0;
                     print("Kupil");
                     buy1 = 1;
                     PlayerPrefs.SetInt("Buy1", buy1);
@@ -44,9 +44,9 @@ public class TopScore : MonoBehaviour
                 }
             break;
             case 1:
-                if (moneys >= 5000 && PlayerPrefs.GetInt("Buy2", 0) == 0)
+                if (moneys >= 2000 && PlayerPrefs.GetInt("Buy2", 0) == 0)
                 {
-                    moneys -= 5000;
+                    moneys -= 2000;
                     print("Kupil1");
                     buy2 = 1;
                     PlayerPrefs.SetInt("Buy2", buy2);
@@ -55,9 +55,9 @@ public class TopScore : MonoBehaviour
                 }
                 break;
             case 2:
-                if (moneys >= 15000 && PlayerPrefs.GetInt("Buy3", 0) == 0)
+                if (moneys >= 5000 && PlayerPrefs.GetInt("Buy3", 0) == 0)
                 {
-                    moneys -= 15000;
+                    moneys -= 5000;
                     print("Kupil2");
                     buy3 = 1;
                     PlayerPrefs.SetInt("Buy3", buy3);
@@ -66,9 +66,9 @@ public class TopScore : MonoBehaviour
                 }
                 break;
             case 3:
-                if (moneys >= 15000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 10000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
                 {
-                    moneys -= 15000;
+                    moneys -= 10000;
                     print("Kupil3");
                     buy4 = 1;
                     PlayerPrefs.SetInt("Buy4", buy4);
@@ -77,67 +77,67 @@ public class TopScore : MonoBehaviour
                 }
                 break;
             case 4:
-                if (moneys >= 25000 && PlayerPrefs.GetInt("Buy5", 0) == 0)
+                if (moneys >= 15000 && PlayerPrefs.GetInt("Buy5", 0) == 0)
                 {
-                    moneys -= 25000;
+                    moneys -= 15000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy5", buy4);
+                    buy5 = 1;
+                    PlayerPrefs.SetInt("Buy5", buy5);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
                 break;
             case 5:
-                if (moneys >= 50000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 25000 && PlayerPrefs.GetInt("Buy6", 0) == 0)
                 {
-                    moneys -= 50000;
+                    moneys -= 25000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy6", buy4);
+                    buy6 = 1;
+                    PlayerPrefs.SetInt("Buy6", buy6);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
                 break;
             case 6:
-                if (moneys >= 60000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 25000 && PlayerPrefs.GetInt("Buy7", 0) == 0)
                 {
-                    moneys -= 60000;
+                    moneys -= 25000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy7", buy4);
+                    buy7 = 1;
+                    PlayerPrefs.SetInt("Buy7", buy7);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
                 break;
             case 7:
-                if (moneys >= 100000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 50000 && PlayerPrefs.GetInt("Buy8", 0) == 0)
                 {
-                    moneys -= 100000;
+                    moneys -= 50000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy8", buy4);
+                    buy8 = 1;
+                    PlayerPrefs.SetInt("Buy8", buy8);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
                 break;
             case 8:
-                if (moneys >= 100000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 75000 && PlayerPrefs.GetInt("Buy9", 0) == 0)
                 {
-                    moneys -= 100000;
+                    moneys -= 75000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy9", buy4);
+                    buy9 = 1;
+                    PlayerPrefs.SetInt("Buy9", buy9);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
                 break;
             case 9:
-                if (moneys >= 500000 && PlayerPrefs.GetInt("Buy4", 0) == 0)
+                if (moneys >= 150000 && PlayerPrefs.GetInt("Buy10", 0) == 0)
                 {
-                    moneys -= 500000;
+                    moneys -= 150000;
                     print("Kupil3");
-                    buy4 = 1;
-                    PlayerPrefs.SetInt("Buy10", buy4);
+                    buy10 = 1;
+                    PlayerPrefs.SetInt("Buy10", buy10);
                     PlayerPrefs.SetInt("Votes", moneys);
                     ShowTop.text = PlayerPrefs.GetInt("Votes", 0).ToString();
                 }
@@ -153,43 +153,43 @@ public class TopScore : MonoBehaviour
 
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 0 && PlayerPrefs.GetInt("Buy1", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 1 && PlayerPrefs.GetInt("Buy2", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил1";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 2 && PlayerPrefs.GetInt("Buy3", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил2";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 3 && PlayerPrefs.GetInt("Buy4", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил3";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 4 && PlayerPrefs.GetInt("Buy5", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил4";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 5 && PlayerPrefs.GetInt("Buy6", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил5";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 6 && PlayerPrefs.GetInt("Buy7", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил6";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 7 && PlayerPrefs.GetInt("Buy8", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил7";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 8 && PlayerPrefs.GetInt("Buy9", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил8";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 9 && PlayerPrefs.GetInt("Buy10", 0) == 1)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "Купил9";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "Использовать";
         }
 
 
@@ -197,43 +197,43 @@ public class TopScore : MonoBehaviour
 
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 0 && PlayerPrefs.GetInt("Buy1", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "5000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "0";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 1 && PlayerPrefs.GetInt("Buy2", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "5000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "2000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 2 && PlayerPrefs.GetInt("Buy3", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "15000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "5000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 3 && PlayerPrefs.GetInt("Buy4", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "15000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "10000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 4 && PlayerPrefs.GetInt("Buy5", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "25000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "15000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 5 && PlayerPrefs.GetInt("Buy6", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "50000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "25000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 6 && PlayerPrefs.GetInt("Buy7", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "60000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "25000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 7 && PlayerPrefs.GetInt("Buy8", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "100000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "50000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 8 && PlayerPrefs.GetInt("Buy9", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "100000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "75000";
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 9 && PlayerPrefs.GetInt("Buy10", 0) == 0)
         {
-            GameObject.Find("BuyedText").GetComponent<Text>().text = "500000";
+            GameObject.Find("BuyedText").GetComponent<Text>().text = "150000";
         }
     }
     public void ChangeSkin()
@@ -241,42 +241,55 @@ public class TopScore : MonoBehaviour
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 0 && PlayerPrefs.GetInt("Buy1", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 1);
+            PlayerPrefs.SetInt("Skinbuff", 0);
+            
+
+
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 1 && PlayerPrefs.GetInt("Buy2", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 2);
+            PlayerPrefs.SetInt("Skinbuff", 1);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 2 && PlayerPrefs.GetInt("Buy3", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 3);
+            PlayerPrefs.SetInt("Skinbuff", 2);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 3 && PlayerPrefs.GetInt("Buy4", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 4);
+            PlayerPrefs.SetInt("Skinbuff", 3);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 4 && PlayerPrefs.GetInt("Buy5", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 5);
+            PlayerPrefs.SetInt("Skinbuff", 4);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 5 && PlayerPrefs.GetInt("Buy6", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 6);
+            PlayerPrefs.SetInt("Skinbuff", 5);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 6 && PlayerPrefs.GetInt("Buy7", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 7);
+            PlayerPrefs.SetInt("Skinbuff", 6);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 7 && PlayerPrefs.GetInt("Buy8", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 8);
+            PlayerPrefs.SetInt("Skinbuff", 7);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 8 && PlayerPrefs.GetInt("Buy9", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 9);
+            PlayerPrefs.SetInt("Skinbuff", 8);
         }
         if (GameObject.Find("Content").GetComponent<SnapScrolling>().selectedPanID == 9 && PlayerPrefs.GetInt("Buy10", 0) == 1)
         {
             PlayerPrefs.SetInt("Skin", 10);
+            PlayerPrefs.SetInt("Skinbuff", 9);
         }
     }
       

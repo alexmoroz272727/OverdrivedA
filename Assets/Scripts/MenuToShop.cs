@@ -9,7 +9,10 @@ public class MenuToShop : MonoBehaviour
 
     void OnMouseDown()
     {
-        SceneManager.LoadScene("Shop");
+        if (PlayerPrefs.GetInt("Policy", 0) == 1)
+        {
+            SceneManager.LoadScene("Shop");
+        }
     }
 }
 

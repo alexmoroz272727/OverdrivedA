@@ -27,7 +27,7 @@ public class FoodGen : MonoBehaviour
     }
     void Start()
     {
-      for (pol1=30; pol1>5; pol1-- )
+      for (pol1=15; pol1>5; pol1-- )
         {
             AddNewSphere();
             
@@ -36,7 +36,7 @@ public class FoodGen : MonoBehaviour
 
     void Update()
     {
-        if (pol1 < 30)
+        if (pol1 < 15)
         {
             AddNewSphere();
             pol1++;

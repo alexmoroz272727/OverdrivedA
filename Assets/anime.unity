@@ -553,6 +553,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1780432320}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &658941088
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658941084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &761704647
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 9c0f3391aac11204698706ffe13603fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9b88f5bfaf32dc34c9a3f5a82946e93c, type: 2}
+      objectReference: {fileID: 2100000, guid: ccc996c26cdbdaa4c8f107258c084e36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c0f3391aac11204698706ffe13603fc, type: 3}
 --- !u!1 &953194168
@@ -758,6 +771,8 @@ GameObject:
   - component: {fileID: 953194169}
   - component: {fileID: 953194171}
   - component: {fileID: 953194172}
+  - component: {fileID: 953194173}
+  - component: {fileID: 953194174}
   m_Layer: 0
   m_Name: GameHelper
   m_TagString: GameHelper
@@ -830,16 +845,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5c27f85780be645b33d00a7f028c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat1: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat2: {fileID: 2100000, guid: f4fb84ef29ad78e41ab9a9b39dc73b58, type: 2}
-  mat3: {fileID: 2100000, guid: 9baf4ae3b2dcf6c4cbbb068fe570e898, type: 2}
-  mat4: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat5: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat6: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat7: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat8: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat9: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-  mat10: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
+  mat1: {fileID: 2100000, guid: bdd3accc7b5e1d046b53e1c1b88f4de4, type: 2}
+  mat2: {fileID: 2100000, guid: 9d61186d170ffa04bad80ccb57ce9d7c, type: 2}
+  mat3: {fileID: 2100000, guid: 1ce3816ef5fcd7f48930e1c905203aa4, type: 2}
+  mat4: {fileID: 2100000, guid: 60b6acd1041cc0e4a81296c258374b92, type: 2}
+  mat5: {fileID: 2100000, guid: bdd099704b33c194591f370eae1b5846, type: 2}
+  mat6: {fileID: 2100000, guid: 5cd7ecdafd652d84489a031f447678d7, type: 2}
+  mat7: {fileID: 2100000, guid: 5123bbb89f10a2c4a838c935a9ee79f3, type: 2}
+  mat8: {fileID: 2100000, guid: 55e9d7aa0bed8e44892424243cf69836, type: 2}
+  mat9: {fileID: 2100000, guid: 2bd892f244ad52b48ab5ccf0e55010e8, type: 2}
+  mat10: {fileID: 2100000, guid: 9baf4ae3b2dcf6c4cbbb068fe570e898, type: 2}
+  SkinBuff: 0
+--- !u!114 &953194173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953194168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3a4449276925243a6420109be5a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementId: video
+--- !u!114 &953194174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953194168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5955f80a659b18d4db572ae026c97f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XSize: 150
+  ZSize: 70
+  foodPrefab: {fileID: 4114608949640246401, guid: a3c5ebd35c4be2443b928a258b41ee02,
+    type: 3}
+  curPos: {x: 0, y: 0, z: 0}
+  curFood: {fileID: 0}
+  eat2: 1
+  pol2: 0
 --- !u!1 &987867045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9c0f3391aac11204698706ffe13603fc,
@@ -855,13 +904,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 987867045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f72eb95115d3a249adec67ec2540448, type: 3}
+  m_Script: {fileID: 11500000, guid: 44de22d133e3ae148901fb71c21e371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   replace: 0
   ShowTop: {fileID: 422914305}
   MoneyScore: 0
   LastMoney: 0
+  a: 0
 --- !u!65 &987867047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2578,7 +2628,13 @@ PrefabInstance:
       propertyPath: ShowTop
       value: 
       objectReference: {fileID: 422914305}
-    m_RemovedComponents: []
+    - target: {fileID: 6877697446187284464, guid: 1c8844b365fcc7f45acdb87d8d1eb635,
+        type: 3}
+      propertyPath: ShowTop
+      value: 
+      objectReference: {fileID: 422914305}
+    m_RemovedComponents:
+    - {fileID: 8884162291461543478, guid: 1c8844b365fcc7f45acdb87d8d1eb635, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c8844b365fcc7f45acdb87d8d1eb635, type: 3}
 --- !u!1 &1144810454
 GameObject:
@@ -3312,6 +3368,16 @@ PrefabInstance:
       propertyPath: ShowMulti
       value: 
       objectReference: {fileID: 1684498972}
+    - target: {fileID: 114000012012314042, guid: 9890f514d07427b4ca931d7dafa72a1d,
+        type: 3}
+      propertyPath: EnemyScore
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012012314042, guid: 9890f514d07427b4ca931d7dafa72a1d,
+        type: 3}
+      propertyPath: MScore
+      value: 1250
+      objectReference: {fileID: 0}
     - target: {fileID: 23000010084853818, guid: 9890f514d07427b4ca931d7dafa72a1d,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -3327,7 +3393,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: c2fc53004cce03b4ea690d19112f73c3, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000012864035216, guid: 9890f514d07427b4ca931d7dafa72a1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9890f514d07427b4ca931d7dafa72a1d, type: 3}
 --- !u!1 &1798198044
 GameObject:
