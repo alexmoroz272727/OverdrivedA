@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class TailMovment : MonoBehaviour {
 
 	public float Speed;
@@ -8,7 +10,8 @@ public class TailMovment : MonoBehaviour {
 	public int indx;
 	public GameObject tailTargetObj;
 	public SnakeMovment mainSnake;
-	void Start()
+    private int replace;
+    void Start()
 	{
 		
 		mainSnake = GameObject.FindGameObjectWithTag("SnakeMain").GetComponent<SnakeMovment>();
@@ -31,8 +34,12 @@ public class TailMovment : MonoBehaviour {
 		{
 			if(indx > 15)
 			{
-				Application.LoadLevel(Application.loadedLevel);
-			}
+
+
+                GameObject.Find("Earth").GetComponent<Borders>().TakieDela();
+
+
+            }
 		}
 
 	}

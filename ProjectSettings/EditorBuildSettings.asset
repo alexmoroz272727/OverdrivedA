@@ -5,19 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/gfdfgdf.unity
-    guid: b6190b94728d6d84bbdaef0e5c6f97dc
-  - enabled: 0
-    path: Assets/Meme.unity
-    guid: 89e410d6e144c024c8999a61e6465e43
-  - enabled: 0
-    path: Assets/Memes.unity
-    guid: d7c62375128830648a2d4e4066b1dd65
-  - enabled: 0
+  - enabled: 1
+    path: Assets/menu.unity
+    guid: 1095a772c5d394240b35ed6f49092fd0
+  - enabled: 1
     path: Assets/anime.unity
     guid: adc11d8572144054383b1c72eb442c89
   - enabled: 1
-    path: Assets/Pedic.unity
-    guid: 67c49e7f19fc51645881957a69329a26
+    path: Assets/Shop.unity
+    guid: f1387c063c18d8e4aa3083f6c5f6f0b4
+  - enabled: 1
+    path: Assets/intro.unity
+    guid: 6028082262858c344b0c4e1774a920a2
   m_configObjects: {}

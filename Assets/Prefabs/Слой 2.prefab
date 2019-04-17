@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2125135435}
   - component: {fileID: 2125135434}
   - component: {fileID: 2125135437}
-  - component: {fileID: 8884162291461543478}
+  - component: {fileID: 6877697446187284464}
   - component: {fileID: 4659987689473675878}
   - component: {fileID: 5196561445088830816}
   - component: {fileID: 6021968638477292648}
@@ -117,10 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604692aceb6dce14bbc52f05b7096a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KD: 0
-  Vverhu: 0
-  timevverhu: 0
---- !u!114 &8884162291461543478
+--- !u!114 &6877697446187284464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,9 +126,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2125135433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f72eb95115d3a249adec67ec2540448, type: 3}
+  m_Script: {fileID: 11500000, guid: 44de22d133e3ae148901fb71c21e371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replace: 0
+  ShowTop: {fileID: 0}
+  MoneyScore: 0
+  LastMoney: 0
 --- !u!65 &4659987689473675878
 BoxCollider:
   m_ObjectHideFlags: 0

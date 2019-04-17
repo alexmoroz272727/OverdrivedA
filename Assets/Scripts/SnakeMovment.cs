@@ -20,20 +20,25 @@ public class SnakeMovment : MonoBehaviour
     public Text MainScore;
     public Text ShowMulti;
 	public double score = 0;
-    public double MScore = 125f;
-    public double EnemyScore = 5000f;
+    public double MScore = 1250f;
+    public double EnemyScore = 5000000f;
     public double Vote;
     public double Multi = 1f;
+    public double Votes;
+    public float bufftime = 40f;
+    public bool buffgo = false;
+    public float acceleration = 0.05f;
    
 	void Start ()
     {
 	tailObjects.Add(gameObject);
+        
     }
 
     void Update () 
 	{
         //Alltime += Time.deltaTime;
-        Speed = Speed + Time.deltaTime * 0.05f;
+        Speed = Speed + Time.deltaTime * acceleration;
         EnemyScore = EnemyScore + 70f * Time.deltaTime;
         //Vote = MScore / EnemyScore * 100f;
         Vote = Math.Round(MScore / EnemyScore * 100f, 2);
@@ -44,16 +49,48 @@ public class SnakeMovment : MonoBehaviour
 
 
 
-        transform.Translate(Vector3.forward*Speed*Time.deltaTime);
+        transform.Translate(Vector3.down*Speed*Time.deltaTime);
+        if (Vote > 25)
+        {
+            PlayerPrefs.SetInt("Votes1", 1);
+            if (Vote > 50)
+            {
+                PlayerPrefs.SetInt("Votes2", 1);
+                if (Vote > 100)
+                {
+                    PlayerPrefs.SetInt("Votes3", 1);
+                    if (Vote > 146)
+                    {
+                    PlayerPrefs.SetInt("Votes4", 1);
+                    }
+                }
 
-		if(omega==true)
+            }
+        }
+
+
+        if (omega==true)
 		{
-			transform.Rotate(Vector3.up*RotationSpeed*Time.deltaTime);
+			transform.Rotate(Vector3.right*RotationSpeed*Time.deltaTime);
 		}
 		if(alpha==true)
 		{
-			transform.Rotate(Vector3.up*-1*RotationSpeed*Time.deltaTime);
+			transform.Rotate(Vector3.right * -1*RotationSpeed*Time.deltaTime);
 		}
+        if (buffgo==true)
+        {
+            bufftime -= Time.deltaTime;
+            if (bufftime < 0)
+            {
+                Multi = Multi/2;
+                Multi = Math.Round(Multi, 3);
+                GameObject.Find("GameHelper").GetComponent<BonusGen>().eat2 = false;
+                bufftime = 40f;
+                buffgo = false;
+
+
+            }
+        }
 	}
 
     public void selld()
@@ -78,29 +115,40 @@ public class SnakeMovment : MonoBehaviour
 
     public void AddTail()
 	{
-        Multi += 0.002f;
+        Multi += 0.005f;
         Multi = Math.Round(Multi, 3);
         MScore = MScore + 10f * Multi;
         score += 1* Multi;
         score = Math.Round(score, 0);
-        
-        
-		Vector3 newTailPos = tailObjects[tailObjects.Count-1].transform.position;
+        Votes += 1 * Multi;
+        Votes = Math.Round(Votes, 0);
+
+
+        Vector3 newTailPos = tailObjects[tailObjects.Count-1].transform.position;
 		newTailPos.z -= z_offset;
 		tailObjects.Add(GameObject.Instantiate(TailPrefab,newTailPos,Quaternion.identity) as GameObject);
 	}
     public void AddTail1()
     {
-        Multi += 0.008f;
+        Multi += 0.015f;
         Multi = Math.Round(Multi, 3);
         MScore = MScore + 30f *Multi;
-        score = score + 10f * Multi;
+        score = score + 5f * Multi;
         score = Math.Round(score, 0);
+        Votes += 5 * Multi;
+        Votes = Math.Round(Votes, 0);
 
 
 
         Vector3 newTailPos = tailObjects[tailObjects.Count - 1].transform.position;
         newTailPos.z -= z_offset;
         tailObjects.Add(GameObject.Instantiate(TailPrefab, newTailPos, Quaternion.identity) as GameObject);
+    } 
+    public void BonusBuff()
+    {
+        Multi = Multi*2;
+        buffgo = true;
+       
+
     }
 }

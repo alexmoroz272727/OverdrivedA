@@ -34,7 +34,7 @@ public class FoodGeneration : MonoBehaviour {
 	}
 	void RandomPos()
 	{
-    curPos = new Vector3(Random.Range(XSize*-1,XSize),-1f,Random.Range(ZSize*-1,ZSize));
+    curPos = new Vector3(Random.Range(XSize*-1,XSize),0f,Random.Range(ZSize*-1,ZSize));
 	}
 
     void Update()
